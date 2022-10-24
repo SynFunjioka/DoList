@@ -1,0 +1,35 @@
+@import "../../abstract/colors";
+
+.ToDoList-Category{
+    width: 20rem;
+    padding: 1rem 2.5rem;
+
+    @include box-shadow;
+    border-radius: 45px;
+    background-color: $base;
+
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        text-align: center;
+    }
+}
+
+.task{
+    padding: 0 .5rem;
+    position: relative;
+    display: flex;
+
+    @include box-shadow;
+    border: 1dpx solid $onBase;
+
+    background-color: $base;
+
+    &-check{
+        position: absolute;
+        left: -.3rem;
+        border: 1px solid $onBase;
+        border-radius: 2px;
+    }
+}

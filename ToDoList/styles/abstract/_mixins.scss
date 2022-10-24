@@ -1,0 +1,6 @@
+@import 'colors';
+
+@mixin box-shadow {
+    box-shadow: .25rem .25rem .5rem $baseDark,
+            -.25rem -.25rem .5rem $baseLight;
+  }
