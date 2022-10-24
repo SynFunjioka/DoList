@@ -22,14 +22,12 @@
     display: flex;
 
     @include box-shadow;
-    border: 1dpx solid $onBase;
+    border: 1px solid $onBase; //Quitar despues
 
-    background-color: $base;
+    background-color: $baseLight;
 
-    &-check{
+    .form-group{
         position: absolute;
         left: -.3rem;
-        border: 1px solid $onBase;
-        border-radius: 2px;
     }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -160,12 +161,41 @@ body {
   box-sizing: border-box;
 }
 
+.custom-checkbox {
+  display: none;
+}
+
+.custom-checkbox + label {
+  cursor: pointer;
+}
+
+.custom-checkbox + label:before {
+  background: #fff;
+  height: 21px;
+  border: 1px solid #1a1a1a;
+  content: "";
+  display: inline-block;
+  width: 21px;
+  vertical-align: middle;
+  margin-right: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-checkbox:checked + label:before {
+  content: "✓";
+  color: red;
+  font-weight: 800;
+  font-size: 24px;
+  text-align: center;
+  line-height: 21px;
+}
+
 .ToDoList-Category {
   width: 20rem;
   padding: 1rem 2.5rem;
-  box-shadow: 0.25rem 0.25rem 0.5rem #e0e0e0, -0.25rem -0.25rem 0.5rem #ffffff;
+  box-shadow: 0.25rem 0.25rem 0.5rem #dbdada, -0.25rem -0.25rem 0.5rem #ffffff;
   border-radius: 45px;
-  background-color: #f4f4f4;
+  background-color: #E6E6E6;
   display: flex;
   flex-direction: column;
 }
@@ -177,15 +207,13 @@ body {
   padding: 0 0.5rem;
   position: relative;
   display: flex;
-  box-shadow: 0.25rem 0.25rem 0.5rem #e0e0e0, -0.25rem -0.25rem 0.5rem #ffffff;
-  border: 1dpx solid #1a1a1a;
-  background-color: #f4f4f4;
+  box-shadow: 0.25rem 0.25rem 0.5rem #dbdada, -0.25rem -0.25rem 0.5rem #ffffff;
+  border: 1px solid #1a1a1a;
+  background-color: #ffffff;
 }
-.task-check {
+.task .form-group {
   position: absolute;
   left: -0.3rem;
-  border: 1px solid #1a1a1a;
-  border-radius: 2px;
 }
 
 /*# sourceMappingURL=main.css.map */

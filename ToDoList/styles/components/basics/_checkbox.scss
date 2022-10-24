@@ -1,0 +1,32 @@
+@import '../../abstract/colors';
+
+.custom-checkbox{
+    display: none;
+}
+
+.custom-checkbox + label{
+    cursor: pointer;
+}
+
+.custom-checkbox + label:before{
+    background: #fff;
+    height: 21px;
+    border: 1px solid $onBase;
+    content: "";
+    display: inline-block;
+    width: 21px;
+    vertical-align: middle;
+    margin-right: 10px;
+    // position: relative;
+    // top: -1px;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-checkbox:checked + label:before{
+    content: "\2713";
+    color: red;
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    line-height: 21px;
+}
