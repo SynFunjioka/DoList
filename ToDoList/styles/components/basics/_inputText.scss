@@ -1,0 +1,10 @@
+@import '../../abstract/colors';
+
+.custom-input{
+    width: 100%;
+    height: 100%;
+
+    padding: 0 1rem;
+    border: none;
+    border-bottom: 1px solid $separator;
+}

@@ -1,6 +1,3 @@
-// import CreateCategory from './taksControllertaksController';
-
-let categories = []
 
 
 function CreateCategory(name){
@@ -21,7 +18,6 @@ function CreateCategory(name){
 }
 
 function CreateTask(name = "Funciona", description = "Esto es una prueba"){
-    
     let taskBody = `
         <div class="task" id="${name}">
             <div class="form-group">
@@ -32,36 +28,12 @@ function CreateTask(name = "Funciona", description = "Esto es una prueba"){
             </div>
             <p>${name}</p>
         </div>`;
-    const node = document.createRange().createContextualFragment(taskBody);
 
     let parent = document.getElementById('listaPrueba');
-    parent.appendChild(node);
+    parent.insertAdjacentElement('beforeend', taskBody);
 
-    categories.push(new Task(name, description));
+    return new Task(name, description);
 }
-
-function InjectTaskCreator(parent){
-    let parentElement = document.getElementById(parent);
-
-    let inputContent = `
-        <div class="ToDoList-CreateTask form-group">
-            <input class="custom-input" type="text" placeholder="Task name" autofocus id="taskCreator">
-        </div>
-    `;
-
-    parentElement.insertBefore();
-}
-
-//Triggers
-let inputTaskCreator = document.getElementById("taskCreator");
-inputTaskCreator.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      CreateTask(inputTaskCreator.value);
-      inputTaskCreator.parentElement.remove();
-    }
-  });
-
 
 function Category(name){
     this.categoryName = name;

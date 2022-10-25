@@ -16,7 +16,7 @@
     <main class="ToDoList">
         <section class="ToDoList-Category">
             <h2>Personal</h2>
-            <div class="ToDoList-List">
+            <div class="ToDoList-List" id="listaPrueba">
                 <div class="task">
                     <div class="form-group">
                         <input class="custom-checkbox checkbox--circle" type="checkbox" 
@@ -27,9 +27,9 @@
                     <p>Delete folders</p>
                 </div>
             </div>
-            <button>New task</button>
+            <button onclick="InjectTaskCreator('ToDoList-Category')">New task</button>
         </section>
     </main>
 </body>
-
+<script src="../js//index.js"></script>
 </html>
