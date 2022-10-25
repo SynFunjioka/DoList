@@ -9,24 +9,29 @@
 }
 
 .custom-checkbox + label:before{
-    background: #fff;
-    height: 21px;
+    background: $baseLight;
+    height: 2rem;
+    width: 2rem;
     border: 1px solid $onBase;
     content: "";
     display: inline-block;
-    width: 21px;
     vertical-align: middle;
-    margin-right: 10px;
-    // position: relative;
-    // top: -1px;
+    position: relative;
     transition: all 0.2s ease-in-out;
+}
+
+.checkbox--circle + label:before{
+    border-radius: 45px;  
 }
 
 .custom-checkbox:checked + label:before{
     content: "\2713";
-    color: red;
+    color: $base;
+    border: none;
+    border-bottom: 1px solid $baseLight;
     font-weight: 800;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
     line-height: 21px;
+    background-color: $success;
 }
